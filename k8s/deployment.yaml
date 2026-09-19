@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: axiomcart}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app: axiomcart}}
+  template:
+    metadata: {labels: {app: axiomcart}}
+    spec:
+      containers:
+      - name: api
+        image: axiomcart:latest
+        ports: [{containerPort: 8080}]
+        readinessProbe: {httpGet: {path: /health, port: 8080}, initialDelaySeconds: 3}
