@@ -1,7 +1,5 @@
 # AxiomCart — Voice-Enabled Multi-Agent Shopping Assistant
 
-> Principal+/Distinguished-level reference architecture for stateful, voice-first agentic commerce. This repository is educational: product data and checkout are simulated; it never charges a payment method.
-
 ## Executive summary
 AxiomCart turns speech or text into grounded shopping assistance using a **LangGraph StateGraph**. An Orchestrator classifies the request, dispatches specialized Product and Support capabilities, and a Synthesizer produces one answer. The Product Agent uses catalog RAG; Support is grounded in policy knowledge. `MemorySaver` checkpoints graph state by `thread_id`. Checkout-like intent crosses a human approval boundary. Whisper transcription and OpenAI TTS are provider adapters; `OFFLINE_MODE=true` makes development deterministic.
 
