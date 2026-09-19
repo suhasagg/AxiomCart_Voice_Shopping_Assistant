@@ -121,8 +121,6 @@ For real voice, set `OFFLINE_MODE=false` and `OPENAI_API_KEY`. Never commit keys
 - **ADR-005 Provider abstraction:** STT/LLM/TTS failures degrade independently and providers can change without rewriting business policy.
 - **ADR-006 Evaluation is deployment infrastructure:** prompt/model/index changes are versioned releases, not ad-hoc configuration edits.
 
-## Interview discussion prompts
-Be prepared to explain why a graph is preferable to a single mega-agent; how reducers avoid races in parallel branches; how you resume an interrupted graph safely; how approval binds to a specific cart snapshot; why RAG cannot be authoritative for price; how you stop catalog prompt injection; how checkpoint retention interacts with privacy; how voice streaming changes backpressure/cancellation; how you measure retrieval separately from generation; and how you migrate embedding models without downtime.
+## Discussion prompts
+Explanation of why a graph is preferable to a single mega-agent; how reducers avoid races in parallel branches; how you resume an interrupted graph safely; how approval binds to a specific cart snapshot; why RAG cannot be authoritative for price; how you stop catalog prompt injection; how checkpoint retention interacts with privacy; how voice streaming changes backpressure/cancellation; how you measure retrieval separately from generation; and how you migrate embedding models without downtime.
 
-## What is intentionally not faked
-This repository does not claim real payment, inventory reservation, order management or production identity integrations. Those require organization-specific systems and credentials. The interfaces and invariants above show where those systems belong without disguising mock behavior as production commerce.
